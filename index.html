@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Kitchen Bistro · Healthy Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>CAT KITCHEN</strong><small>Healthy Bistro Demo</small></div></div>
+      <div class="hud"><span>♥ 3</span><span class="coin">●</span><span id="coins">128</span><span class="day">DAY 04</span></div>
+    </header>
+
+    <section class="stage" id="stage">
+      <div class="screen active" data-screen="order">
+        <div class="sun"></div><div class="window-glow"></div>
+        <div class="screen-title"><span>01</span><h1>TAKE ORDER</h1><small>接待一位新客人</small></div>
+        <div class="order-layout">
+          <div class="cat-scene"><div class="cat cat-large"><i class="ear left"></i><i class="ear right"></i><i class="stripe s1"></i><i class="stripe s2"></i><i class="stripe s3"></i><i class="eye e1"></i><i class="eye e2"></i><i class="nose"></i><i class="mouth"></i><i class="bib"></i></div><div class="speech">今天想吃点清爽的！<b>低盐蔬菜碗</b><small>富含维生素 · 适合午餐</small></div></div>
+          <div class="ticket card"><div class="ticket-head">ORDER TICKET <span>NEW</span></div><div class="meal-icon">🥗</div><h2>Rainbow Veggie Bowl</h2><p>彩虹蔬菜碗 · 低盐配方</p><div class="nutrition-row"><span>🥕 维生素</span><span>💧 低盐</span><span>🌾 纤维</span></div><button class="primary" data-go="ingredients">开始准备 <span>→</span></button></div>
+        </div>
+      </div>
+
+      <div class="screen" data-screen="ingredients">
+        <div class="screen-title"><span>02</span><h1>SELECT INGREDIENTS</h1><small>选出一份平衡搭配</small></div>
+        <div class="ingredient-layout"><div class="pantry card"><div class="card-label">PANTRY / 食材库</div><div class="ingredient-grid" id="ingredientGrid"></div></div><aside class="balance card"><div class="mini-cat">🐱</div><h2>Balanced Meal</h2><p>每一类食材都很重要</p><div class="meter"><i id="balanceMeter"></i></div><div class="meter-caption"><span id="selectedCount">0</span>/4 已选择</div><div class="tip"><b>小知识</b><br>颜色越丰富，通常代表营养来源越多样。</div><button class="primary" data-go="cook" id="cookStart" disabled>开始烹饪 <span>→</span></button></aside></div>
+      </div>
+
+      <div class="screen" data-screen="cook">
+        <div class="screen-title"><span>03</span><h1>COOK & SERVE</h1><small>把健康食材变成美味的一餐</small></div>
+        <div class="cook-layout"><div class="cook-station"><div class="tiles"></div><div class="pot"><span>🥦 🥕 🍜</span></div><div class="flame">♨</div><div class="cat cat-cook"><i class="ear left"></i><i class="ear right"></i><i class="stripe s1"></i><i class="stripe s2"></i><i class="stripe s3"></i><i class="eye e1"></i><i class="eye e2"></i><i class="nose"></i><i class="mouth"></i><i class="bib"></i></div></div><div class="cook-panel card"><div class="timer-ring"><span id="progressText">0%</span></div><h2>健康烹饪进度</h2><div class="progress"><i id="cookProgress"></i></div><p id="cookHint">点击按钮开始翻炒</p><button class="primary" id="cookButton">开始翻炒 <span>✦</span></button><div class="serve-preview"><span>🥗</span><div><b>完成后上菜</b><small>少油 · 多蔬菜 · 好心情</small></div></div></div></div>
+      </div>
+
+      <div class="screen" data-screen="upgrade">
+        <div class="screen-title"><span>04</span><h1>KITCHEN UPGRADE</h1><small>让健康选择变得更容易</small></div>
+        <div class="upgrade-layout"><div class="kitchen-map"><div class="map-window"></div><div class="map-counter c1"></div><div class="map-counter c2"></div><div class="map-plant">🌿</div><div class="mini-cat cat-map">🐱</div><div class="map-caption">MY BISTRO</div></div><div class="upgrade-cards" id="upgradeCards"></div></div>
+      </div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Demo navigation"><button class="nav-item active" data-nav="order"><span>🍽️</span>接单</button><button class="nav-item" data-nav="ingredients"><span>🥕</span>选食材</button><button class="nav-item" data-nav="cook"><span>🍳</span>烹饪</button><button class="nav-item" data-nav="upgrade"><span>✨</span>升级</button></nav>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
